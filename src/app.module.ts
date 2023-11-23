@@ -5,6 +5,7 @@ import { JwtModule } from '@nestjs/jwt';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { PartModule } from './part/part.module';
+import { ShocksModule } from './shocks/shocks.module';
 
 
 
@@ -16,7 +17,8 @@ import { PartModule } from './part/part.module';
       secret: process.env.JWT_SECRET,
       signOptions: { expiresIn: '60m' },
     }),
-    PartModule
+    PartModule,
+    ShocksModule
   ],
   controllers: [AppController],
   providers: [AppService],
