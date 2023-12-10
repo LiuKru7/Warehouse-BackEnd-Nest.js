@@ -11,4 +11,5 @@ export const PartHistorySchema = new Schema({
 export interface PartHistory extends Document {
     code: string;
     history: any[];
+
 }
